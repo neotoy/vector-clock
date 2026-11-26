@@ -1,24 +1,58 @@
-This is free and unencumbered software released into the public domain.
+Open Community License (OCL v1.1)
 
-Anyone is free to copy, modify, publish, use, compile, sell, or
-distribute this software, either in source code form or as a compiled
-binary, for any purpose, commercial or non-commercial, and by any
-means.
+OCL pertains to intellectual property applied in licensor‘s product (licensed
+item - hardware and/or software) and/or its components which is distributed as
+is under OCL, including copyright, registered design or design patent, and
+(utility) patent.
 
-In jurisdictions that recognize copyright laws, the author or authors
-of this software dedicate any and all copyright interest in the
-software to the public domain. We make this dedication for the benefit
-of the public at large and to the detriment of our heirs and
-successors. We intend this dedication to be an overt act of
-relinquishment in perpetuity of all present and future rights to this
-software under copyright law.
+All licensor‘s copyrights, designs, and patents as far as relevant to products
+and/or its components under OCL are COMMUNITY-OPEN, as the aim of OCL is to
+allow open access to relevant community including the essential right, the
+right-to-repair, by giving users complete freedom of use, copy, modification,
+and hack, while promoting a fair competition by securing intellectual property
+rights to prevent vendor lock-in and patent trolling.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
-OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
-ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
-OTHER DEALINGS IN THE SOFTWARE.
+NOTE that any component provided under a license incompatible with OCL and as
+such included in or distributed alongside the product and/or its component
+remains unaffected by OCL.
 
-For more information, please refer to <http://unlicense.org>
+Also NOTE that OCL does not override imperative exceptions and limitations under
+applicable law.
+
+As a non-commercial END USER
+
+YOU MAY use, copy, modify, hack the product and/or its components as you wish!
+
+YOU SHOULD support the community by sharing your creations and modifications.
+
+If you distribute your creations, modifications, or any such derivatives YOU
+MUST do so under OCL allowing other community members to do everything that YOU
+MAY. This does not concern your creations and modifications that are not derived
+from the product and/or its components.
+
+As a commercial BUSINESS USER
+
+YOU MAY use the product and modify it to your use case solely for your internal
+business use (including internal production).
+
+YOU MUST NOT copy or in any way replicate the product and/or its components
+and/or its derivatives for any commercial purpose excluding your internal
+right-to-repair without obtaining a separate business license or repair license.
+
+Licensor‘s products and/or its components under OCL MUST NOT BE subject to any
+systematic or automated text and/or data mining or other text and/or data
+collection activity in relation to the product without explicit permission.
+
+Licensor may expand conditions of OCL distribution only by including add-on
+conditions (one or more) defined and provided in OCL repository. Any
+distribution under OCL requires clear reference to an OCL version and applicable
+add-on conditions and their version. Any allowed distribution of derivatives
+must retain applicable add-on conditions.
+
+To promote ease of understanding of OCL licensor may keep and update a database
+of products and/or its components licensed under OCL and good practice.
+
+For practical examples of how this license applies, see the examples/
+directory. For available add-on conditions, see the addons/ directory.
+
+https://github.com/OpenCommunityLicence/OpenCommunityLicence/blob/main/LICENSE
