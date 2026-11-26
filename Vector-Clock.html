@@ -10,7 +10,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Intel+One+Mono:wght@300..700&family=Source+Code+Pro:wght@300..700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -54,7 +54,7 @@ transform: translate(-50%, -50%);
 text-align: center;
 font-size: calc(100vmin / 20);
 line-height: 78%;
-font-family: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+font-family: Intel One Mono, Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 color: rgb(255, 255, 255);
 }
 
@@ -84,7 +84,7 @@ display: block;
 opacity: 0.0;
 background-color: white;
 padding: 1%;
-font-family: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+font-family: Intel One Mono, Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 font-size: calc(100vmin / 35);
 line-height: 180%;
 border-bottom-right-radius: 10px;
@@ -94,14 +94,14 @@ border-bottom-right-radius: 10px;
 
 button
 {
-font-family: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+font-family: Intel One Mono, Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 font-size: calc(100vmin / 30);
 border-radius: 4px;
 }
 
 select
 {
-font-family: Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+font-family: Intel One Mono, Source Code Pro, ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 font-size: calc(100vmin / 30);
 border-radius: 4px;
 }
@@ -418,10 +418,28 @@ function setDigitalFontWeight(weight) {
     document.getElementById("dat").style.fontWeight = String(weight);
 }
 
-function type_black() { setDigitalFontWeight(900); }
+function type_black() { setDigitalFontWeight(700); }
 function type_bold() { setDigitalFontWeight(500); }
 function type_regular() { setDigitalFontWeight(400); }
-function type_light() { setDigitalFontWeight(200); }
+function type_light() { setDigitalFontWeight(300); }
+
+function typeface_theme() {
+    const typeface = document.getElementById("typeface").value;
+    const fontFamilies = {
+        typeface1: '"Intel One Mono", "Source Code Pro", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace',
+        typeface2: '"Source Code Pro", "Intel One Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace'
+    };
+    const fontFamily = typeface === ""
+        ? fontFamilies.typeface1
+        : fontFamilies[typeface];
+
+    if (!fontFamily) {
+        console.error(`Unsupported typeface: ${typeface}`);
+        return;
+    }
+
+    document.getElementById("dat").style.fontFamily = fontFamily;
+}
 
 window.addEventListener("load", () => {
     mp();
@@ -560,13 +578,19 @@ sun.style.fill='black', sun_rc.style.background=sun.style.fill
 
 <button type="button" id="dat_rc" onclick="dat.style.color=rc(), dat_rc.style.background=dat.style.color">🎲</button>
 
-<button type="button" id="type_black" title="Type Black" onclick="type_black()"><span style="font-weight: 900;">B</span></button>
+<select id="typeface" onchange="typeface_theme()">
+<option selected="selected" value="">Typeface</option>
+<option value="typeface1">One Mono</option>
+<option value="typeface2">Source Code</option>
+</select>
+
+<button type="button" id="type_black" title="Type Black" onclick="type_black()"><span style="font-weight: 700;">B</span></button>
 
 <button type="button" id="type_bold" title="Type Bold" onclick="type_bold()"><span style="font-weight: 500;">B</span></button>
 
 <button type="button" id="type_regular" title="Type Regular" onclick="type_regular()"><span style="font-weight: 400;">B</span></button>
 
-<button type="button" id="type_light" title="Type Light" onclick="type_light()"><span style="font-weight: 200;">B</span></button>
+<button type="button" id="type_light" title="Type Light" onclick="type_light()"><span style="font-weight: 300;">B</span></button>
 
 <br>
 
@@ -974,6 +998,7 @@ Change Log (changes listed in order of significance):
 
 VERSION 028 · 2026-11-24,25,26
 
+added typeface selector for digital display
 changed update frequency of sun arc & moon phase to every 6 hours
 fixed glitch in mickey hand svg
 added full moon indicator
